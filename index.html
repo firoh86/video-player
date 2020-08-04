@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Player</title>
+    <link rel="icon" href="icon/favicon-16x16.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="player" id="player">
+      <video
+        class="video"
+        playsinline
+        src="/assets/Sony A7S III Adventure film  First cinematic 4K footage reveal.mp4"
+      ></video>
+      <!-- show controls -->
+      <div class="show-controls">
+        <!-- Controls container -->
+        <div class="controls-container">
+          <!-- Progress bar -->
+          <div class="progress-range" title="Seek">
+            <div class="progress-bar"></div>
+          </div>
+          <div class="control-group">
+            <!-- Left Controls -->
+            <div class="controls-left">
+              <!-- play/pause -->
+              <div class="play-controls">
+                <i class="fas fa-play" title="Play" id="play-btn"></i>
+              </div>
+              <!-- volume controls -->
+              <div class="volume">
+                <div class="volume-icon">
+                  <i
+                    class="fas fa-volume-up"
+                    title="Mute"
+                    id="volumen-icon"
+                  ></i>
+                </div>
+                <div class="volume-range" title="Change Volume">
+                  <div class="volume-bar"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Right controls -->
+            <div class="controls-right">
+              <!-- Speed -->
+              <div class="speed" title="Playback Rate">
+                <select
+                  name="playbackRate"
+                  class="player-speed"
+                  id="player-speed"
+                >
+                  <option value="0.5">0.5 x</option>
+                  <option value="0.75">0.75 x</option>
+                  <option value="1" selected>1 x</option>
+                  <option value="1.25" selected>1.25 x</option>
+                  <option value="1.5">1.5 x</option>
+                  <option value="2">2 x</option>
+                </select>
+              </div>
+              <!-- Time -->
+              <div class="time">
+                <span class="time-elapsed">00:00 /</span>
+                <span class="time-duration">2:38</span>
+              </div>
+              <!-- Fullscreen -->
+              <div class="fullscreen" id="fullscreenBtn">
+                <i class="fas fa-expand"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
